@@ -1,0 +1,116 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--surface-ground);
+  color: var(--text-color);
+}
+
+/* Layout styles */
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Utility classes */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+/* Card styles */
+.card {
+  background: var(--surface-card);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+/* Form styles */
+.field {
+  margin-bottom: 1.5rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* Button styles */
+.p-button {
+  margin-right: 0.5rem;
+}
+
+.p-button:last-child {
+  margin-right: 0;
+}
+
+/* Table styles */
+.p-datatable .p-datatable-header {
+  background: var(--surface-section);
+  border: 1px solid var(--surface-border);
+  border-width: 1px 0 1px 0;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+/* Responsive utilities */
+@media screen and (max-width: 768px) {
+  .layout-wrapper {
+    flex-direction: column;
+  }
+
+  .layout-sidebar {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+
+  .layout-sidebar.active {
+    transform: translateX(0);
+  }
+}
+
+/* Auth pages */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-ground);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}

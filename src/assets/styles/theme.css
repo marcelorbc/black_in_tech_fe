@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --black-in-tech-gradient: linear-gradient(90deg, #121212 0%, #1e1e1e 100%);
+
+  /* Colors inspired by African vibrant palette */
+  --green: #4caf50; /* Prosperidade */
+  --purple: #9c27b0; /* Diversidade */
+  --orange: #ff8c00; /* Energia, Criatividade */
+  --blue: #1976d2; /* Comunicação, Networking */
+  --red: #d32f2f; /* Pertencimento, Força */
+  --yellow: #ffc107; /* Destaque, Excelência */
+
+  /* Base dark colors */
+  --primary-background-color: #121212 !important;
+  --primary-text-color: #ffffff;
+  --primary-card-color: #1e1e1e;
+  --primary-border-color: #333333;
+  --primary-color: #ff8c00;
+  --primary-dark: #d17a00;
+  --primary-light: #ffb74d;
+
+  --surface-ground: #121212;
+  --surface-section: #1e1e1e;
+  --surface-card: #262626;
+  --surface-overlay: #333333;
+  --surface-border: #424242;
+
+  --text-color: #ffffff;
+  --text-color-secondary: #bdbdbd;
+
+  --font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --constrast-text-color: #121212;
+  --contrast-background-color-1: #ffffff;
+  --contrast-background-color-2: #f5f5f5;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--primary-dark) 100%
+  );
+  --gradient-surface: linear-gradient(135deg, #1e1e1e 0%, #262626 100%);
+
+  /* Effects */
+  --shadow-1: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-3: 0 16px 48px rgba(0, 0, 0, 0.4);
+  --glow-primary: 0 0 20px rgba(255, 140, 0, 0.5);
+
+  /* Border radius */
+  --border-radius: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+}
+
+/* Glossy card effect */
+.card {
+  background: var(--gradient-surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-3);
+}
+
+/* Button styles */
+.p-button {
+  background: var(--gradient-primary);
+  border: none;
+  box-shadow: var(--shadow-1);
+  transition: all 0.3s ease;
+}
+
+.p-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--glow-primary);
+}
+
+/* Input styles */
+.p-inputtext {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--surface-border);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.p-inputtext:hover {
+  border-color: var(--primary-color);
+}
+
+.p-inputtext:focus {
+  box-shadow: var(--glow-primary);
+}
+
+/* Navigation */
+.layout-sidebar {
+  background: var(--gradient-surface);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Auth pages */
+.auth-wrapper {
+  background: var(--gradient-surface);
+}
+
+.auth-card {
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-3);
+}
+
+/* Table styles */
+.p-datatable {
+  background: var(--surface-card);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.p-datatable .p-datatable-header {
+  background: var(--gradient-surface);
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-ground);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
